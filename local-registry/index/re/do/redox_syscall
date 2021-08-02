@@ -1,1 +1,0 @@
-{"name":"redox_syscall","vers":"0.2.9","deps":[{"name":"bitflags","req":"^1.1.0","features":[],"optional":false,"default_features":true,"target":null,"kind":null,"package":null}],"cksum":"5ab49abadf3f9e1c4bc499e8845e152ad87d2ad2d30371841171169e9d75feee","features":{},"yanked":false}
