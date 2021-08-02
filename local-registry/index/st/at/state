@@ -1,1 +1,0 @@
-{"name":"state","vers":"0.4.2","deps":[{"name":"lazy_static","req":"^1","features":[],"optional":true,"default_features":true,"target":null,"kind":null,"package":null}],"cksum":"3015a7d0a5fd5105c91c3710d42f9ccf0abfb287d62206484dcc67f9569a6483","features":{"const_fn":[],"tls":["lazy_static"]},"yanked":false}

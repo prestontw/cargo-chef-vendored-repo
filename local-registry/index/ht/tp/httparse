@@ -1,1 +1,0 @@
-{"name":"httparse","vers":"1.4.1","deps":[{"name":"pico-sys","req":"^0.0.1","features":[],"optional":false,"default_features":true,"target":null,"kind":"dev","package":null}],"cksum":"f3a87b616e37e93c22fb19bcd386f02f3af5ea98a25670ad0fce773de23c5e68","features":{"default":["std"],"std":[]},"yanked":false}
