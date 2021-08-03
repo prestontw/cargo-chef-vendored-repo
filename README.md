@@ -45,11 +45,16 @@ That seems the most straightforward to me.
 I followed the steps for [Getting Started](https://rocket.rs/v0.5-rc/guide/getting-started/) with Rocket.
 I then tried to recreate another issue I'm working on with `cargo chef`,
 but it turns out that it's pretty isolated.
-(Quickly, rather than de-`tar`ing a dependency saved with [`cargo-local-registry`](https://crates.io/crates/cargo-local-registry),
+
+<details>
+<summary>Interested in the isolated issue?</summary>
+
+Quickly, rather than de-`tar`ing a dependency saved with [`cargo-local-registry`](https://crates.io/crates/cargo-local-registry),
 it seems like we copied an entire Git repo as a patch for a dependency for Rust. This re-joined
 several crates that are in the same repo but published separately, leading to unergonomic usage of specifying patches.
 See https://github.com/LukeMathWalker/cargo-chef/pull/70#issuecomment-891241059 for more details.
-In this repo's history, trying to recreate corresponds to commits 701804162b960d0534e307a9c0e89bb4ad860313--5dc7d4539161f762935d324be1de2218482650c4)
+In this repo's history, trying to recreate corresponds to commits `701804162b960d0534e307a9c0e89bb4ad860313`--`5dc7d4539161f762935d324be1de2218482650c4`.
+</details>
 
 While trying to recreate that issue, though, I found that `cargo vendor` includes
 raw Rust files, so `cargo chef` might accidentally skelefy them.
