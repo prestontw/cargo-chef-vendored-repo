@@ -2,7 +2,7 @@ FROM rust:1.54.0 as planner
 
 WORKDIR /opt/hellow
 
-RUN cargo install cargo-chef --version 0.1.21
+RUN cargo install cargo-chef --version 0.1.31
 COPY .cargo .cargo
 COPY ./Cargo.toml ./Cargo.toml
 COPY ./Cargo.lock ./Cargo.lock
