@@ -6,7 +6,7 @@ RUN cargo install --git https://github.com/prestontw/cargo-chef.git --branch ptw
 COPY .cargo .cargo
 COPY ./Cargo.toml ./Cargo.toml
 COPY ./Cargo.lock ./Cargo.lock
-COPY ./vendor ./vendor
+COPY ./local-registry ./local-registry
 COPY src src
 
 RUN cargo chef prepare --recipe-path recipe.json
@@ -25,7 +25,7 @@ RUN cargo install --git https://github.com/prestontw/cargo-chef.git --branch ptw
 COPY .cargo .cargo
 COPY ./Cargo.toml ./Cargo.toml
 COPY ./Cargo.lock ./Cargo.lock
-COPY ./vendor ./vendor
+COPY ./local-registry ./local-registry
 COPY --from=planner /opt/hellow/recipe.json recipe.json
 RUN cargo chef cook --offline --recipe-path recipe.json
 
@@ -39,7 +39,7 @@ WORKDIR /opt/hellow
 COPY .cargo .cargo
 COPY ./Cargo.toml ./Cargo.toml
 COPY ./Cargo.lock ./Cargo.lock
-COPY ./vendor ./vendor
+COPY ./local-registry ./local-registry
 COPY src src
 
 COPY --from=cacher /opt/hellow/target target
