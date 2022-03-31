@@ -2,7 +2,7 @@ FROM rust:1.54.0 as planner
 
 WORKDIR /opt/hellow
 
-RUN cargo install --git https://github.com/prestontw/cargo-chef.git --branch ptw/issue-74-ignore-vendored-directory
+RUN cargo install cargo-chef --version 0.1.35
 COPY .cargo .cargo
 COPY ./Cargo.toml ./Cargo.toml
 COPY ./Cargo.lock ./Cargo.lock
@@ -21,7 +21,7 @@ RUN cargo chef prepare --recipe-path recipe.json
 #
 FROM rust:1.54.0 as cacher
 WORKDIR /opt/hellow
-RUN cargo install --git https://github.com/prestontw/cargo-chef.git --branch ptw/issue-74-ignore-vendored-directory
+RUN cargo install cargo-chef --version 0.1.35
 COPY .cargo .cargo
 COPY ./Cargo.toml ./Cargo.toml
 COPY ./Cargo.lock ./Cargo.lock
